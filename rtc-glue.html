@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="rtc-room" content="test">
+    <title>rtc.io - RTC Glue</title>
+    <script type="text/javascript" src="js/rtc-glue.js"></script>
+  </head>
+
+  <body>
+    <h1>RTC Glue</h1>
+    <h3>Local Video</h3>
+    <video id="main" rtc-capture="camera"></video>
+
+    <h3>Remote Video</h3>
+    <video rtc-peer rtc-stream="main"></video>
+  </body>
+</html>

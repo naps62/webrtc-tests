@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="rtc-room" content="test">
+    <title>Go Instant Widgets</title>
+    <script type="text/javascript" src="https://cdn.goinstant.net/v1/platform.min.js"></script>
+    <script type="text/javascript" src="https://cdn.goinstant.net/widgets/webrtc/latest/webrtc.min.js"></script>
+    <script type="text/javascript" src="https://cdn.goinstant.net/widgets/user-list/latest/user-list.min.js"></script>
+    <script type="text/javascript" src="https://cdn.goinstant.net/widgets/notifications/latest/notifications.min.js"></script>
+    <script type="text/javascript" src="https://cdn.goinstant.net/widgets/chat/latest/chat.min.js"></script>
+    <script src="lib/jquery-2.1.0.js"></script>
+    <link rel="stylesheet" href="https://cdn.goinstant.net/widgets/webrtc/latest/webrtc.css" />
+    <link rel="stylesheet" href="https://cdn.goinstant.net/widgets/user-list/latest/user-list.css" />
+    <link rel="stylesheet" href="https://cdn.goinstant.net/widgets/chat/latest/chat.css" />
+    <link rel="stylesheet" href="https://cdn.goinstant.net/widgets/notifications/latest/notifications.css" />
+
+    <style>
+      #container {
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button class="baderous">Baderous</button>
+    <button class="johnny">Johnny</button>
+    <script type="text/javascript" src="js/go-rtc-with-widgets.js"></script>
+    <div id="container">
+      <div id="webinar-notification" class="gi-override gi-notify-top gi-notify-wrapper"></div>
+      <div id="webinar-expand"       class="gi-override gi-userlist gi-anchor gi-right gi-collapsed"></div>
+      <div id="webinar-userlist"     class="gi-override gi-userlist gi-anchor gi-right gi-collapsed"></div>
+      <div id="webinar-webrtc"       class="gi-override gi-webrtc"></div>
+      <div id="webinar-chat"         class="gi-chat gi-override gi-left gi-anchor"></div>
+    </div>
+  </body>
+</html>

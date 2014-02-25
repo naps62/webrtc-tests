@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="rtc-room" content="test">
+    <title>rtc.io - RTC Quickconnect</title>
+    <script src="lib/jquery-2.1.0.js"></script>
+    <style type="text/css">
+      .local {
+        background-color: #ccc;
+        display: inline-block;
+      }
+
+      .local h2 {
+        text-align: center;
+      }
+
+      .local video {
+        max-width: 280px;
+      }
+
+      .others {
+        display: inline-block;
+        background-color: #f44;
+      }
+
+      .other h2 {
+        text-align: center
+      }
+
+      .other video {
+        max-width: 120px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="local">
+      <h2>Me</h2>
+      <div class="rtc-container"></div>
+    </div>
+    <div class="others">
+    </div>
+    <script type="text/javascript" src="js/rtc-quickconnect.js"></script>
+  </body>
+</html>
