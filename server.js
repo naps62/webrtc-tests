@@ -7,7 +7,7 @@ var path = require('path');
 var app = express();
 
 // all environments
-app.set('port', process.env.NODE_PORT || 8000);
+app.set('port', process.env.PORT || 8000);
 app.use(app.router);
 
 app.use('/js', browserify(path.join(__dirname, 'js'), {
