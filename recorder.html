@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="rtc-room" content="test">
+    <title>RecordRTC test</title>
+    <script src="lib/jquery-2.1.0.js"></script>
+    <script src="lib/RecordRTC.js"></script>
+    <script src="js/recorder.js"></script>
+  </head>
+
+  <body>
+    <section id="audio-to-audio">
+      <h1>Audio to audio</h1>
+      <audio class="src"></audio>
+      <button class="start">Start Recording</button>
+      <button class="stop">Finish Recording</button>
+      <audio class="dst" controls></audio>
+      <a class="download" download="audio-to-audio.wav">Download Result<a>
+
+      <script>
+        $(function() { $('#audio-to-audio').audioToAudio(); })
+      </script>
+  </body>
+</html>

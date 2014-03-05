@@ -15,14 +15,14 @@ $(function() {
 
     var webrtc = new goinstant.widgets.WebRTC({
       room: room
-      // expandContainer: $container.find('#webinar-expand')[0],
-      // listContainer: $container.find('#webinar-webrtc')[0]
+      expandContainer: $container.find('#webinar-expand')[0],
+      listContainer: $container.find('#webinar-webrtc')[0]
     });
 
     var userList = new goinstant.widgets.UserList({
       room: room,
       collapsed: true
-      // container: $container.find('#webinar-userlist')[0]
+      container: $container.find('#webinar-userlist')[0]
     });
 
     var chat = new goinstant.widgets.Chat({
@@ -31,7 +31,7 @@ $(function() {
     });
 
     var notifications = new goinstant.widgets.Notifications({
-      // container: $container.find('#webinar-notifications')[0]
+      container: $container.find('#webinar-notifications')[0]
     });
 
     webrtc.initialize(genericErrorHandler);
