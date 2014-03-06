@@ -1,8 +1,3 @@
-audioConstraints = {
-  audio: true,
-  video: false
-};
-
 findComponents = function(ctx) {
   ctx.$start = ctx.find('.start')
   ctx.$stop  = ctx.find('.stop')
@@ -20,46 +15,82 @@ errorHandle = function() { console.log('recording error'); }
 $.fn.audioToAudio = function() {
   var that = this;
   findComponents(that);
-  this.audioStream = null;
-  this.recorder = null;
+  this.recordRTC = null;
   this.$stop.hide();
+  this.$download.hide();
 
   this.recordHandle = function(stream) {
-    if (window.IsChrome) stream = new window.MediaStream(stream.getAudioTracks());
-    that.audioStream = stream;
-
-    that.$src.attr('src', URL.createObjectURL(that.audioStream));
-    that.$src[0].play();
-
-    that.recorder = window.RecordRTC(stream, { type: 'audio' });
-    that.recorder.startRecording();
+    that.recordRTC = window.RecordRTC(stream);
+    that.recordRTC.startRecording();
   };
 
   this.$start.on('click', function() {
-    if (!that.audioStream) {
-      navigator.getUserMedia(audioConstraints, that.recordHandle, errorHandle);
-    } else {
-      $src.attr = URL.createObjectURL(that.audioStream);
-      $src[0].play();
-      if (that.recorder) that.recorder.startRecording();
-    }
-    window.isAudio = true;
+    navigator.getUserMedia({ audio: true }, that.recordHandle, errorHandle);
 
     that.$start.hide();
     that.$stop.show();
+    that.$dst.hide();
+    that.$download.hide();
+  });
+
+  this.$stop.on('click', function() {
+    that.recordRTC.stopRecording(function(url) {
+      that.$dst.attr('src', url);
+      that.$download.attr('href', url)
+      that.$dst.show();
+      that.$start.show();
+      that.$stop.hide();
+      that.$download.show();
+    });
+  })
+};
+
+//
+// Video to video
+//
+
+$.fn.videoToVideo = function() {
+  var that = this;
+  findComponents(that);
+  this.recordRTC = null;
+  this.$stop.hide();
+  this.$src.hide();
+  this.$dst.hide();
+  this.$download.hide();
+
+  this.recordHandle = function(stream) {
+    that.recordRTC = window.RecordRTC(stream, { type: 'video' });
+    that.recordRTC.startRecording();
+
+    that.$src.attr('src', URL.createObjectURL(stream));
+    that.$src[0].play();
+  };
+
+  this.$start.on('click', function() {
+    navigator.getUserMedia({ audio: true, video: true }, that.recordHandle, errorHandle);
+
+    that.$start.hide();
+    that.$stop.show();
+    that.$src.show();
+    that.$dst.hide();
+    that.$download.hide();
   });
 
   this.$stop.on('click', function() {
     that.$src.attr('src', '');
-    if (that.recorder) {
-      that.recorder.stopRecording(function(url) {
+    if (that.recordRTC) {
+      that.recordRTC.stopRecording(function(url) {
         console.log(url);
         that.$dst.attr('src', url);
-        that.$download.attr('href', url)
+        that.$download.attr('href', url);
+
+        that.$start.show();
+        that.$stop.hide();
+        that.$src.hide();
+        that.$dst.show();
+        that.$download.show();
       });
     }
 
-    that.$start.show();
-    that.$stop.hide();
   })
 }

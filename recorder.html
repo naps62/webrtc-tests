@@ -11,15 +11,29 @@
 
   <body>
     <section id="audio-to-audio">
-      <h1>Audio to audio</h1>
-      <audio class="src"></audio>
+      <h1>Audio</h1>
       <button class="start">Start Recording</button>
       <button class="stop">Finish Recording</button>
-      <audio class="dst" controls></audio>
+      <audio class="dst" style="display: none" controls></audio>
       <a class="download" download="audio-to-audio.wav">Download Result<a>
+    </section>
+
+    <hr />
+
+    <section id="video-to-video">
+      <h1>Video</h1>
+      <button class="start">Start Recording</button>
+      <button class="stop">Finish Recording</button>
+      <video class="src" muted></video>
+      <video class="dst" controls></video>
+      <a class="download" download="video-to-video">Download Result<a>
+    </section>
 
       <script>
-        $(function() { $('#audio-to-audio').audioToAudio(); })
+        $(function() {
+          $('#audio-to-audio').audioToAudio();
+          $('#video-to-video').videoToVideo();
+        });
       </script>
   </body>
 </html>
