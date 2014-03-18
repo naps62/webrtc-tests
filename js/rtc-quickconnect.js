@@ -16,7 +16,7 @@ localMedia = media({
 localMedia.render($local[0]);
 
 startFunc = function(stream) {
-  quickconnect(location.href + '../../', {
+  quickconnect('http://rtc.io/switchboard', {
     room: 'test'
   })
   .broadcast(stream)
