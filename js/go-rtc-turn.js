@@ -9,7 +9,7 @@ $(function() {
   var $container = $('#container');
 
   window.turnserversDotComAPI.iceServers(function(iceData) {
-    goinstant.connect(url, function(err, platform, room) {
+    goinstant.connect(url, { room: 'test_tuesday' }, function(err, platform, room) {
       if (err) {
         throw err;
       }
