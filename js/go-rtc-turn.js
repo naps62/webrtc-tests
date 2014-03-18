@@ -14,7 +14,9 @@ $(function() {
     }
 
     var turnServer = {
-      url: 'turn:yniche.com:3478'
+      url: 'turn:yniche.com:3478',
+      username: 'yniche_test',
+      credential: 'yniche_test'
     };
 
     var webrtc = new goinstant.widgets.WebRTC({
