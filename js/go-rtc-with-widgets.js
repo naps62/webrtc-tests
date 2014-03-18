@@ -13,15 +13,22 @@ $(function() {
       throw err;
     }
 
+    var turnServer = {
+      url: 'turn:yniche.com:3478'
+    };
+
     var webrtc = new goinstant.widgets.WebRTC({
-      room: room
+      room: room,
       expandContainer: $container.find('#webinar-expand')[0],
-      listContainer: $container.find('#webinar-webrtc')[0]
+      listContainer: $container.find('#webinar-webrtc')[0],
+      peerConnectionConfig: {
+        iceServers: [ turnServer ]
+      }
     });
 
     var userList = new goinstant.widgets.UserList({
       room: room,
-      collapsed: true
+      collapsed: true,
       container: $container.find('#webinar-userlist')[0]
     });
 
