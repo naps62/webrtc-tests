@@ -21,7 +21,6 @@ $(function() {
       //   credential: 'yniche_test'
       // };
 
-      debugger
       var webrtc = new goinstant.widgets.WebRTC({
         room: room,
         expandContainer: $container.find('#webinar-expand')[0],
