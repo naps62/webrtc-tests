@@ -15,7 +15,7 @@ $(function() {
 
     var stunServer = { url: 'stun:stun.l.google.com:19302' };
     var turnServer = {
-      url: 'turn:yniche_test@188.226.165.193'
+      url: 'turn:yniche_test@188.226.165.193',
       credential: 'yniche_test'
     };
 
