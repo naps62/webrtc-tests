@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="rtc-room" content="test">
     <title>webRTC Tests by @naps62</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
@@ -27,12 +28,47 @@
           <li><a href="/pages/goinstant.html">GoInstant</a></li>
           <li><a href="/pages/goinstant-widgets.html">GoInstant with Widgets</a></li>
           <li><a href="/pages/goinstant-turn.html">GoInstant via TURN</a></li>
-          <li><a href="/pages/recorder.html">Recorder</a></li>
+          <li><a href="/pages/recordrtc-audio.html">RecordRTC - Audio</a></li>
+          <li><a href="/pages/recordrtc-video.html">RecordRTC - Video</a></li>
         </ul>
       </div>
 
       <div class="col-md-10">
-        <h1>Home</h1>
+        <style type="text/css">
+          .local {
+            background-color: #ccc;
+            display: inline-block;
+          }
+
+          .local h2 {
+            text-align: center;
+          }
+
+          .local video {
+            max-width: 280px;
+          }
+
+          .others {
+            display: inline-block;
+            background-color: #f44;
+          }
+
+          .other h2 {
+            text-align: center
+          }
+
+          .other video {
+            max-width: 120px;
+          }
+        </style>
+        <h1>rtc.io - RTC Quickconnect</h1>
+        <div class="local">
+          <h2>Me</h2>
+          <div class="rtc-container"></div>
+        </div>
+        <div class="others">
+        </div>
+        <script type="text/javascript" src="/js/rtc-quickconnect.js"></script>
       </div>
     </div>
   </body>

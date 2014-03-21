@@ -27,12 +27,29 @@
           <li><a href="/pages/goinstant.html">GoInstant</a></li>
           <li><a href="/pages/goinstant-widgets.html">GoInstant with Widgets</a></li>
           <li><a href="/pages/goinstant-turn.html">GoInstant via TURN</a></li>
-          <li class="active"><a href="/pages/recorder.html">Recorder</a></li>
+          <li><a href="/pages/recordrtc-audio.html">RecordRTC - Audio</a></li>
+          <li class="active"><a href="/pages/recordrtc-video.html">RecordRTC - Video</a></li>
         </ul>
       </div>
 
       <div class="col-md-10">
-        <h1>Home</h1>
+        <h1>RecordRTC - Video</h1>
+        <script src="/lib/RecordRTC.js"></script>
+        <script src="/js/recorder.js"></script>
+
+        <section id="video-to-video">
+          <button class="start">Start Recording</button>
+          <button class="stop">Finish Recording</button>
+          <video class="src" muted></video>
+          <video class="dst" controls></video>
+          <a class="download" download="video-to-video">Download Result<a>
+        </section>
+
+        <script>
+          $(function() {
+            $('#video-to-video').videoToVideo();
+          });
+        </script>
       </div>
     </div>
   </body>

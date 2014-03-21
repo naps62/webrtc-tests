@@ -27,12 +27,30 @@
           <li><a href="/pages/goinstant.html">GoInstant</a></li>
           <li class="active"><a href="/pages/goinstant-widgets.html">GoInstant with Widgets</a></li>
           <li><a href="/pages/goinstant-turn.html">GoInstant via TURN</a></li>
-          <li><a href="/pages/recorder.html">Recorder</a></li>
+          <li><a href="/pages/recordrtc-audio.html">RecordRTC - Audio</a></li>
+          <li><a href="/pages/recordrtc-video.html">RecordRTC - Video</a></li>
         </ul>
       </div>
 
       <div class="col-md-10">
-        <h1>Home</h1>
+        <h1>GoInstant with Widgets</h1>
+        <style>
+          #container {
+            background-color: #ccc;
+          }
+        </style>
+        <script type="text/javascript" src="https://cdn.goinstant.net/v1/platform.min.js"></script>
+        <script type="text/javascript" src="https://cdn.goinstant.net/widgets/webrtc/latest/webrtc.min.js"></script>
+        <script type="text/javascript" src="https://cdn.goinstant.net/widgets/user-list/latest/user-list.min.js"></script>
+        <script type="text/javascript" src="https://cdn.goinstant.net/widgets/notifications/latest/notifications.min.js"></script>
+        <script type="text/javascript" src="https://cdn.goinstant.net/widgets/chat/latest/chat.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.goinstant.net/widgets/webrtc/latest/webrtc.css" />
+        <link rel="stylesheet" href="https://cdn.goinstant.net/widgets/user-list/latest/user-list.css" />
+        <link rel="stylesheet" href="https://cdn.goinstant.net/widgets/chat/latest/chat.css" />
+        <link rel="stylesheet" href="https://cdn.goinstant.net/widgets/notifications/latest/notifications.css" />
+        <button class="baderous">Baderous</button>
+        <button class="johnny">Johnny</button>
+        <script type="text/javascript" src="/js/go-rtc-widgets.js"></script>
       </div>
     </div>
   </body>

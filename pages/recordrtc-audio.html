@@ -24,52 +24,30 @@
           <li><a href="/index.html">Home</a></li>
           <li><a href="/pages/rtc-glue.html">RTC Glue</a></li>
           <li><a href="/pages/rtc-quickconnect.html">RTC Quickconnnect</a></li>
-          <li class="active"><a href="/pages/goinstant.html">GoInstant</a></li>
+          <li><a href="/pages/goinstant.html">GoInstant</a></li>
           <li><a href="/pages/goinstant-widgets.html">GoInstant with Widgets</a></li>
           <li><a href="/pages/goinstant-turn.html">GoInstant via TURN</a></li>
-          <li><a href="/pages/recordrtc-audio.html">RecordRTC - Audio</a></li>
+          <li class="active"><a href="/pages/recordrtc-audio.html">RecordRTC - Audio</a></li>
           <li><a href="/pages/recordrtc-video.html">RecordRTC - Video</a></li>
         </ul>
       </div>
 
       <div class="col-md-10">
-        <style type="text/css">
-          .local {
-            background-color: #ccc;
-            display: inline-block;
-          }
+        <h1>RecordRTC - Audio</h1>
+        <script src="/lib/RecordRTC.js"></script>
+        <script src="/js/recorder.js"></script>
+        <section id="audio-to-audio">
+          <button class="start">Start Recording</button>
+          <button class="stop">Finish Recording</button>
+          <audio class="dst" style="display: none" controls></audio>
+          <a class="download" download="audio-to-audio.wav">Download Result<a>
+        </section>
 
-          .local h2 {
-            text-align: center;
-          }
-
-          .local video {
-            max-width: 280px;
-          }
-
-          .others {
-            display: inline-block;
-            background-color: #f44;
-          }
-
-          .other h2 {
-            text-align: center
-          }
-
-          .other video {
-            max-width: 120px;
-          }
-        </style>
-        <h1>GoInstant</h1>
-        <div class="local">
-          <h2>Me</h2>
-          <div class="rtc-container"></div>
-        </div>
-        <div class="others">
-        </div>
-        <script type="text/javascript" src="https://cdn.goinstant.net/v1/platform.min.js"></script>
-        <script type="text/javascript" src="https://cdn.goinstant.net/integrations/gortc/latest/gortc.min.js"></script>
-        <script type="text/javascript" src="/js/go-rtc.js"></script>
+        <script>
+          $(function() {
+            $('#audio-to-audio').audioToAudio();
+          });
+        </script>
       </div>
     </div>
   </body>
