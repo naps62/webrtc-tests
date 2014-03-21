@@ -1,0 +1,22 @@
+name: webRTC Tests
+markdown: redcarpet
+pygments: true
+baseurl: '/webrtc-tests'
+
+navigation:
+  - text: Home
+    url: /index.html
+  - text: RTC Glue
+    url: /pages/rtc-glue.html
+  - text: RTC Quickconnect
+    url: /pages/rtc-quickconnect.html
+  - text: GoInstant
+    url: /pages/goinstant.html
+  - text: GoInstant widgets
+    url: /pages/goinstant-widgets.html
+  - text: GoInstant with TURN
+    url: /pages/goinstant-turn.html
+  - text: RecordRTC Audio
+    url: /pages/recordrtc-audio.html
+  - text: RecordRTC Video
+    url: /pages/recordrtc-video.html

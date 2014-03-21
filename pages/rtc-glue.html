@@ -1,59 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>webRTC Tests by @naps62</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/css/styles.css">
-  </head>
+---
+layout: default
+title: rtc glue - webRTC Tests
+---
 
-  <body>
-    <nav class="navbar navbar-default">
-      <div class="container-fuild">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="index.html">webRTC Tests</a>
-        </div>
-      </div>
-    </nav>
-
-    <div class="row">
-      <div class="col-md-2">
-        <ul id="menu" class="nav nav-pills nav-stacked">
-          <li><a href="/index.html">Home</a></li>
-          <li class="active"><a href="rtc-glue.html">RTC Glue</a></li>
-          <li><a href="rtc-quickconnect.html">RTC Quickconnnect</a></li>
-          <li><a href="goinstant.html">GoInstant</a></li>
-          <li><a href="goinstant-widgets.html">GoInstant with Widgets</a></li>
-          <li><a href="goinstant-turn.html">GoInstant via TURN</a></li>
-          <li><a href="recordrtc-audio.html">RecordRTC - Audio</a></li>
-          <li><a href="recordrtc-video.html">RecordRTC - Video</a></li>
-        </ul>
-      </div>
-
-      <div class="col-md-10" id="rtc-glue">
-        <h1>RTC Glue</h1>
-        <div class="row">
-          <div class="col-md-6">
-            <h2>You</h2>
-            <section class="stream">
-              <video id="main" rtc-capture="camera"></video>
-            </section>
-          </div>
-          <div class="col-md-6">
-            <h2>Someone else</h2>
-            <section class="stream">
-              <video rtc-peer rtc-stream="main"></video>
-            </section>
-          </div>
-        </div>
+<h1>RTC Glue</h1>
+<div class="row">
+  <div class="col-md-6">
+    <h2>You</h2>
+    <section class="stream">
+      <video id="main" rtc-capture="camera"></video>
+    </section>
+  </div>
+  <div class="col-md-6">
+    <h2>Someone else</h2>
+    <section class="stream">
+      <video rtc-peer rtc-stream="main"></video>
+    </section>
+  </div>
+</div>
 
 
-        <script type="text/javascript" src="../lib/rtc-glue.js"></script>
-      </div>
-    </div>
-    <a href="https://github.com/naps62/webrtc-tests"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
-  </body>
-</html>
+<script type="text/javascript" src="../lib/rtc-glue.js"></script>
