@@ -1,0 +1,30 @@
+h1,
+h2 {
+  text-align: center
+}
+
+.stream {
+  position: relative;
+  width: 280px;
+}
+
+.stream.large {
+  width: 560px;
+}
+
+.stream video {
+  max-width: 280px;
+}
+
+.stream.large video {
+  max-width: 560px
+}
+
+.stream .name {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
