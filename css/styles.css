@@ -6,6 +6,7 @@ h2 {
 .stream {
   position: relative;
   width: 280px;
+  margin: auto
 }
 
 .stream.large {
