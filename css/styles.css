@@ -4,9 +4,7 @@ h2 {
 }
 
 .stream {
-  position: relative;
   width: 280px;
-  margin: auto
 }
 
 .stream.large {
@@ -21,11 +19,6 @@ h2 {
   max-width: 560px
 }
 
-.stream .name {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  color: white;
-  font-weight: bold;
-  text-align: center;
+#rtc-glue .stream {
+  margin: auto
 }

@@ -2,9 +2,9 @@ var quickconnect = require('rtc-quickconnect');
 var media = require('rtc-media');
 var captureConfig = require('rtc-captureconfig');
 
-$local = $('.local .rtc-container');
-$remotes_container = $('.others');
-$remote = $('<div class="other"><h2>Other</h2></div>');
+$local = $('#rtc-local-container');
+$remotes_container = $('#rtc-remotes-container');
+$remote = $('<div class="stream"></div>');
 peerMedia = {};
 
 // capture local media

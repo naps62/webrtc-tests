@@ -36,11 +36,17 @@
 
       <div class="col-md-10">
         <h1>rtc.io - RTC Quickconnect</h1>
-        <div class="local">
-          <h2>Me</h2>
-          <div class="rtc-container"></div>
-        </div>
-        <div class="others">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>You</h2>
+            <section class="stream" id="rtc-local-container">
+            </section>
+          </div>
+          <div class="col-md-6">
+            <h2>Everyone Else</h2>
+            <section id="rtc-remotes-container">
+            </section>
+          </div>
         </div>
         <script type="text/javascript" src="../js/rtc-quickconnect.js"></script>
       </div>
