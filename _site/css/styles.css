@@ -1,0 +1,24 @@
+h1,
+h2 {
+  text-align: center
+}
+
+.stream {
+  width: 280px;
+}
+
+.stream.large {
+  width: 560px;
+}
+
+.stream video {
+  max-width: 280px;
+}
+
+.stream.large video {
+  max-width: 560px
+}
+
+#rtc-glue .stream {
+  margin: auto
+}
