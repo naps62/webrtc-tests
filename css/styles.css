@@ -1,3 +1,11 @@
+.social {
+  margin-top: 15px;
+}
+
+.social span {
+  display: inline-block;
+}
+
 h1,
 h2 {
   text-align: center
