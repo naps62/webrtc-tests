@@ -15,9 +15,9 @@ $(function() {
 
     var stunServer = { url: 'stun:stun.l.google.com:19302' };
     var turnServer = {
-      url: 'turn:numb.viagenie.ca',
-      username: 'mpalhas@gmail.com',
-      credential: 'mpalhas'
+      url: 'turn:turn-alt.yniche.com',
+      username: 'yniche',
+      credential: 'yniche'
     };
 
     console.log(turnServer);
