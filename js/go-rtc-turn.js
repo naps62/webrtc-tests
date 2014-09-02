@@ -25,7 +25,7 @@ $(function() {
       credential: 'yniche'
     };
 
-    var iceData = [ stunServer, turnServer ]
+    var iceData = [ stunServer, turnServer, turnServer2 ]
 
     console.log(iceData);
     var webrtc = new goinstant.widgets.WebRTC({
