@@ -15,19 +15,25 @@ $(function() {
 
     var stunServer = { url: 'stun:stun.l.google.com:19302' };
     var turnServer = {
+      url: 'turn:turn.yniche.com',
+      username: 'yniche',
+      credential: 'yniche'
+    };
+    var turnServer2 = {
       url: 'turn:turn-alt.yniche.com',
       username: 'yniche',
       credential: 'yniche'
     };
 
-    console.log(turnServer);
-    // console.log(iceData);
+    var iceData = [ stunServer, turnServer ]
+
+    console.log(iceData);
     var webrtc = new goinstant.widgets.WebRTC({
       room: room,
       expandContainer: $container.find('#webinar-expand')[0],
       listContainer: $container.find('#webinar-webrtc')[0],
       peerConnectionConfig: {
-        iceServers: [ stunServer, turnServer ]
+        iceServers: iceData
       }
     });
 
